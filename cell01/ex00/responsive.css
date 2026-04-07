@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+.box1 {
+    background-color: #4bb754;
+}
+
+.box2 {
+    background-color: #d1493d;
+}
+
+/* Default: side by side, full page */
+td {
+    width: 50%;
+    height: 100%;
+}
+
+/* On small screens, stack vertically */
+@media (max-width: 600px) {
+    table {
+        display: block;
+    }
+    td {
+        display: block;
+        width: 100%;
+        height: 50%;
+    }
+}

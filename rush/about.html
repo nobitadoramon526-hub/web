@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - About Me</title>
+    <link rel="stylesheet" href="rush.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-down': 'fadeInDown 0.7s ease-out',
+                        'fade-in-up': 'fadeInUp 0.7s ease-out',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        animation
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes carouselSlide {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .carousel-slide {
+            animation: carouselSlide 0.8s ease-in-out forwards;
+        }
+        .rgb-border {
+            border: 3px solid rgb(255, 0, 0);
+            transition: border-color 0.8s ease;
+        }
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: none;
+        }
+        .scroll-animate.in-view {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .scroll-card {
+            opacity: 0;
+            animation: none;
+        }
+        .scroll-card.in-view {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+        .scroll-card:nth-child(2).in-view {
+            animation: fadeInUp 0.8s ease-out 0.2s forwards;
+        }
+        .scroll-card:nth-child(3).in-view {
+            animation: slideInRight 0.8s ease-out 0.4s forwards;
+        }
+    </style>
+</head>
+<body class="font-inter min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-gray-800 py-5">
+    <div class="max-w-4xl mx-auto px-5">
+        <nav class="sticky top-0 z-50 bg-white shadow-lg py-0 mb-7 border-b-4 border-blue-500 -my-5">
+            <div class="max-w-4xl mx-auto px-5 flex justify-between items-center">
+                <a href="about.html" class="text-xl font-bold text-gray-800 no-underline">Portfolio</a>
+                <ul class="flex list-none gap-0">
+                    <li><a href="about.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100 active:text-blue-600 active:border-blue-500 active:bg-blue-200">About Me</a></li>
+                    <li><a href="showcase.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100">Showcase</a></li>
+                    <li><a href="contact.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="text-center text-white mb-12 animate-fade-in-down">
+            <h1 class="text-5xl font-bold mb-4 text-shadow-lg">NLaungPR</h1>
+            <p class="text-xl font-light opacity-95">PORTFOLIO NLAUNGPR</p>
+        </header>
+
+        <!-- Large Picture Carousel Section -->
+        <div class="w-full mb-12 rounded-3xl overflow-hidden shadow-2xl relative bg-black">
+            <div class="relative w-full h-96 md:h-[500px] overflow-hidden">
+                <!-- Carousel Container -->
+                <div id="carousel-container" class="relative w-full h-full">
+                    <div class="carousel-item absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 opacity-100" 
+                         style="background-image: url(';">https://picsum.photos/seed/portfolio1/1200/600')
+                        <div class="absolute inset-0 bg-black/30 flex items-end p-8">
+                            </div>
+                            <div class=""text-white">
+                                <h3 class="text-3xl font-bold mb-2">Project One</h3>
+                                <p class="text-lg opacity-90">Innovative Front-End Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 opacity-0" 
+                         style="background-image: url('https://picsum.photos/seed/portfolio2/1200/600');">
+                        <div class="absolute inset-0 bg-black/30 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-3xl font-bold mb-2">Project Two</h3>
+                                <p class="text-lg opacity-90">Full-Stack Architecture</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-700 opacity-0" 
+                         style="background-image: url('https://picsum.photos/seed/portfolio3/1200/600');">
+                        <div class="absolute inset-0 bg-black/30 flex items-end p-8">
+                            <div class="text-white">
+                                <h3 class="text-3xl font-bold mb-2">Project Three</h3>
+                                <p class="text-lg opacity-90">User Experience Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrow Buttons -->
+                <button onclick="prevSlide()" class="absolute left-6 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/20 text-white hover:bg-white/40 transition-all duration-300 flex items-center justify-center text-2xl font-bold shadow-lg hover:shadow-2xl">
+                    ◀
+                </button>
+                <button onclick="nextSlide()" class="absolute right-6 top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full bg-white/20 text-white hover:bg-white/40 transition-all duration-300 flex items-center justify-center text-2xl font-bold shadow-lg hover:shadow-2xl">
+                    ▶
+                </button>
+
+                <!-- Dots Indicator -->
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                    <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/60 hover:bg-white transition-all duration-300" data-slide="0"></button>
+                    <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white transition-all duration-300" data-slide="1"></button>
+                    <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/30 hover:bg-white transition-all duration-300" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-white rounded-3xl p-10 shadow-2xl mb-10 animate-fade-in-up rgb-border">
+            <div class="grid grid-cols-1 md:grid-cols-[340px_1fr] gap-8 items-start">
+                <div class="relative bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl p-4 shadow-2xl overflow-hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <h4 class="text-xl font-bold text-white">Gallery</h4>
+                        <div class="flex gap-2">
+                            <button class="w-11 h-11 rounded-2xl bg-white/20 text-white hover:bg-white/30 transition" onclick="moveSlide(-1)">◀</button>
+                            <button class="w-11 h-11 rounded-2xl bg-white/20 text-white hover:bg-white/30 transition" onclick="moveSlide(1)">▶</button>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-[30px] border border-white/20">
+                        <div class="flex w-[300%] transition-transform duration-500 ease-in-out slider-container">
+                            <div class="w-1/3 min-w-[260px] h-[520px] shrink-0 bg-cover bg-center" style="background-image:url('https://picsum.photos/seed/1/360/520');">
+                                <div class="h-full bg-black/20 p-6 flex flex-col justify-end text-white">
+                                    <span class="text-sm uppercase tracking-[0.3em] mb-3">Creative</span>
+                                    <h5 class="text-2xl font-bold">Design Thinking</h5>
+                                </div>
+                            </div>
+                            <div class="w-1/3 min-w-[260px] h-[520px] shrink-0 bg-cover bg-center" style="background-image:url('https://picsum.photos/seed/2/360/520');">
+                                <div class="h-full bg-black/20 p-6 flex flex-col justify-end text-white">
+                                    <span class="text-sm uppercase tracking-[0.3em] mb-3">Build</span>
+                                    <h5 class="text-2xl font-bold">Full-Stack Projects</h5>
+                                </div>
+                            </div>
+                            <div class="w-1/3 min-w-[260px] h-[520px] shrink-0 bg-cover bg-center" style="background-image:url('https://picsum.photos/seed/3/360/520');">
+                                <div class="h-full bg-black/20 p-6 flex flex-col justify-end text-white">
+                                    <span class="text-sm uppercase tracking-[0.3em] mb-3">Impact</span>
+                                    <h5 class="text-2xl font-bold">User Experiences</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 grid grid-cols-3 gap-3">
+                        <button class="tab-button rounded-3xl bg-white/20 text-white py-3 px-2 font-semibold text-sm transition" onclick="selectSlide(0)">Creative</button>
+                        <button class="tab-button rounded-3xl bg-white/20 text-white py-3 px-2 font-semibold text-sm transition" onclick="selectSlide(1)">Build</button>
+                        <button class="tab-button rounded-3xl bg-white/20 text-white py-3 px-2 font-semibold text-sm transition" onclick="selectSlide(2)">Impact</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl text-gray-800 mb-6 flex items-center gap-3 font-bold">
+                        <span class="w-1 h-10 bg-gradient-to-b from-blue-500 to-purple-600 rounded"></span>
+                        About Me
+                    </h3>
+                    
+                    <!-- Description Box -->
+                    <div class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-3xl p-8 mb-8 border-2 border-blue-400 shadow-2xl rgb-border">
+                        <h4 class="text-2xl font-bold text-blue-700 mb-6 flex items-center gap-2">
+                            <span class="text-3xl">📝</span>
+                            My Story
+                        </h4>
+                        <p class="text-gray-800 mb-4 leading-relaxed font-medium text-lg">Hello! I'm KONDEE, a passionate full-stack developer with over 5 years of experience in creating innovative web applications. I specialize in modern JavaScript frameworks and have a keen eye for user experience design.</p>
+
+                        <p class="text-gray-800 mb-4 leading-relaxed font-medium text-lg">My journey in tech started during my time at the School of KONDEE, where I discovered my love for coding and problem-solving. Since then, I've worked on numerous projects ranging from small business websites to large-scale enterprise applications.</p>
+
+                        <p class="text-gray-800 mb-4 leading-relaxed font-medium text-lg">I'm always eager to learn new technologies and stay up-to-date with the latest trends in web development. When I'm not coding, I enjoy exploring new places, reading tech blogs, and contributing to open-source projects.</p>
+
+                        <p class="text-gray-700 leading-relaxed font-medium">My expertise includes React, Node.js, Python, and cloud technologies. I believe in writing clean, maintainable code and following best practices to deliver high-quality solutions.</p>
+                    </div>
+
+                    <!-- Info Cards Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-gradient-to-br from-blue-100 to-blue-50 p-6 rounded-2xl border border-blue-300 shadow-lg scroll-card hover:shadow-2xl transition-shadow duration-300 rgb-border">
+                            <strong class="text-blue-700 text-sm uppercase tracking-wider block mb-3 text-lg">Name</strong>
+                            <span class="text-gray-800 text-xl font-bold">KONDEE</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-100 to-purple-50 p-6 rounded-2xl border border-purple-300 shadow-lg scroll-card hover:shadow-2xl transition-shadow duration-300 rgb-border">
+                            <strong class="text-purple-700 text-sm uppercase tracking-wider block mb-3 text-lg">School</strong>
+                            <span class="text-gray-800 text-xl font-bold">School of KONDEE</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-teal-100 to-teal-50 p-6 rounded-2xl border border-teal-300 shadow-lg scroll-card hover:shadow-2xl transition-shadow duration-300 rgb-border">
+                            <strong class="text-teal-700 text-sm uppercase tracking-wider block mb-3 text-lg">Location</strong>
+                            <span class="text-gray-800 text-xl font-bold">KONDEE World</span>
+                        </div>
+                        <div class="bg-gradient-to-br from-orange-100 to-orange-50 p-6 rounded-2xl border border-orange-300 shadow-lg scroll-card hover:shadow-2xl transition-shadow duration-300 rgb-border">
+                            <strong class="text-orange-700 text-sm uppercase tracking-wider block mb-3 text-lg">Experience</strong>
+                            <span class="text-gray-800 text-xl font-bold">5+ Years</span>
+                        </div>
+                    </div>
+
+                    <!-- Interests Box -->
+                    <div class="bg-gradient-to-br from-pink-100 to-pink-50 p-6 rounded-2xl border border-pink-300 shadow-lg scroll-card mt-4 hover:shadow-2xl transition-shadow duration-300 rgb-border">
+                        <strong class="text-pink-700 text-sm uppercase tracking-wider block mb-3 text-lg">Interests</strong>
+                        <span class="text-gray-800 text-xl font-bold">Web Development, Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-topics" class="bg-white rounded-3xl p-10 shadow-2xl scroll-animate opacity-0 translate-y-8 transition-all duration-700 ease-out rgb-border">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                <span class="w-1 h-10 bg-gradient-to-b from-blue-500 to-purple-600 rounded"></span>
+                About Me Topics
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="p-6 rounded-3xl bg-blue-50 border border-blue-100 shadow-sm scroll-card rgb-border">
+                    <h4 class="text-xl font-semibold mb-3 text-blue-700">Creative Problem Solving</h4>
+                    <p class="text-gray-600">I enjoy solving complex challenges with elegant and maintainable code.</p>
+                </div>
+                <div class="p-6 rounded-3xl bg-purple-50 border border-purple-100 shadow-sm scroll-card rgb-border">
+                    <h4 class="text-xl font-semibold mb-3 text-purple-700">User-Focused Design</h4>
+                    <p class="text-gray-600">I build interfaces that feel intuitive and polished across every device.</p>
+                </div>
+                <div class="p-6 rounded-3xl bg-teal-50 border border-teal-100 shadow-sm scroll-card rgb-border">
+                    <h4 class="text-xl font-semibold mb-3 text-teal-700">Continuous Learning</h4>
+                    <p class="text-gray-600">Staying current with trends and new tools is a core part of my approach.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentCarouselSlide = 0;
+        let carouselAutoplay;
+        let currentSlide = 0;
+        const sliderContainer = document.querySelector('.slider-container');
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const aboutTopics = document.getElementById('about-topics');
+
+        // Carousel Functions
+        function updateCarousel() {
+            const items = document.querySelectorAll('.carousel-item');
+            const dots = document.querySelectorAll('.carousel-dot');
+            items.forEach((item, index) => {
+                item.classList.toggle('opacity-100', index === currentCarouselSlide);
+                item.classList.toggle('opacity-0', index !== currentCarouselSlide);
+            });
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-white/60', index === currentCarouselSlide);
+                dot.classList.toggle('bg-white/30', index !== currentCarouselSlide);
+            });
+        }
+
+        function goToSlide(index) {
+            currentCarouselSlide = index;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function nextSlide() {
+            currentCarouselSlide = (currentCarouselSlide + 1) % 3;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function prevSlide() {
+            currentCarouselSlide = (currentCarouselSlide - 1 + 3) % 3;
+            updateCarousel();
+            resetAutoplay();
+        }
+
+        function resetAutoplay() {
+            clearInterval(carouselAutoplay);
+            startAutoplay();
+        }
+
+        function startAutoplay() {
+            carouselAutoplay = setInterval(() => {
+                nextSlide();
+            }, 5000);
+        }
+
+        startAutoplay();
+
+        // Gallery Functions (small gallery in about section)
+        function updateTabs(index) {
+            tabButtons.forEach((button, i) => {
+                button.classList.toggle('bg-white/90 text-blue-700 shadow-lg', i === index);
+                button.classList.toggle('bg-white/20 text-white', i !== index);
+            });
+        }
+
+        function selectSlide(index) {
+            currentSlide = index;
+            sliderContainer.style.transform = `translateX(-${index * 100}%)`;
+            updateTabs(index);
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + 3) % 3;
+            selectSlide(currentSlide);
+        }
+
+        // Initialize tabs
+        updateTabs(0);
+
+        // Auto slide every 4 seconds for gallery
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000);
+
+        // Intersection Observer for scroll animations
+        const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        scrollElements.forEach(el => observer.observe(el));
+
+        // Animate topics when section enters view
+        const topicsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    aboutTopics.classList.remove('opacity-0', 'translate-y-8');
+                    aboutTopics.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        topicsObserver.observe(aboutTopics);
+    </script>
+    <script src="rgb-border.js"></script>
+</body>
+</html>

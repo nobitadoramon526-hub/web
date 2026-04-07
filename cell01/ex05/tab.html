@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Boxes</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #523962;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            max-width: 200%;
+            box-shadow: 0 9px 27px rgba(0, 0, 0, 0.12);
+        }
+
+        td {
+            width: 50%;
+            padding: 36px 20px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .box1 {
+            background-color: #4bb754;
+        }
+
+        .box2 {
+            background-color: #d1493d;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="box1">Minecraft Bedrock</td>
+            <td class="box2">Minecraft Java</td>
+        </tr>
+    </table>
+</body>
+</html>

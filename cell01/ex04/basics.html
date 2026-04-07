@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #FFB6C1;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .shops {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .shop {
+            text-align: center;
+            flex: 0 1 300px;
+        }
+
+        .shop img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .shop a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .shop a:hover {
+            color: #FF69B4;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #333;
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: right;
+            font-style: italic;
+            font-family: 'Courier New', monospace;
+            color: #333;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Shopping ★</h1>
+
+        <div class="shops">
+            <div class="shop">
+                <img src="https://laz-img-cdn.alicdn.com/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png" alt="Lazada Shop">
+                <a href="https://www.lazada.co.th" target="_blank">Visit Lazada Thailand →</a>
+            </div>
+            <div class="shop">
+                <img src="https://www.leceipt.com/wp-content/uploads/2021/11/shopee-1.png" alt="Shopee Shop">
+                <a href="https://www.shopee.co.th" target="_blank">Visit Shopee Thailand →</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <footer>
+             © nlaungpr 2026
+        </footer>
+    </div>
+</body>
+</html>

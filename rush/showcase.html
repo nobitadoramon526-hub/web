@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Showcase</title>
+    <link rel="stylesheet" href="rush.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-down': 'fadeInDown 0.7s ease-out',
+                        'fade-in-up': 'fadeInUp 0.7s ease-out',
+                    },
+                    keyframes: {
+                        fadeInDown: {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-inter min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-gray-800 py-5">
+    <div class="max-w-4xl mx-auto px-5">
+        <nav class="sticky top-0 z-50 bg-white shadow-lg py-0 mb-7 border-b-4 border-blue-500 -my-5">
+            <div class="max-w-4xl mx-auto px-5 flex justify-between items-center">
+                <a href="about.html" class="text-xl font-bold text-gray-800 no-underline">Portfolio</a>
+                <ul class="flex list-none gap-0">
+                    <li><a href="about.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100">About Me</a></li>
+                    <li><a href="showcase.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100 active:text-blue-600 active:border-blue-500 active:bg-blue-200">Showcase</a></li>
+                    <li><a href="contact.html" class="block py-4 px-12 text-gray-800 no-underline font-medium transition-all duration-300 border-b-4 border-transparent text-sm bg-blue-50 hover:text-blue-600 hover:border-blue-500 hover:bg-blue-100">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="text-center text-white mb-12 animate-fade-in-down">
+            <h1 class="text-5xl font-bold mb-4 text-shadow-lg">Showcase</h1>
+            <p class="text-xl font-light opacity-95">My Skills, Experience & Achievements</p>
+        </header>
+                </div>
+                <div>
+        <section class="bg-white rounded-2xl p-10 shadow-2xl mb-7 animate-fade-in-up">
+            <h3 class="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+                <span class="w-1 h-10 bg-gradient-to-b from-blue-500 to-purple-600 rounded"></span>
+                Certificates & Achievements
+            </h3>
+            <p class="text-gray-600 mb-8 leading-relaxed">Professional certifications and achievements that demonstrate my expertise and commitment to continuous learning.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2 border-blue-200">
+                    <div class="w-full h-40 bg-cover bg-center relative overflow-hidden" 
+                         style="background-image: url('https://picsum.photos/seed/cert1/3508/2480');">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-blue-700 mb-3">Full Stack Web Development</h4>
+                        <p class="text-gray-700 leading-relaxed">Advanced certification in modern full-stack development with hands-on experience in JavaScript, React, Node.js, and database management.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2 border-purple-200">
+                    <div class="w-full h-56 bg-cover bg-center relative overflow-hidden" 
+                         style="background-image: url('https://picsum.photos/seed/cert2/3508/2480');">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-purple-700 mb-3">UI/UX Design Master</h4>
+                        <p class="text-gray-700 leading-relaxed">Professional certification in user interface and user experience design, focusing on responsive design, accessibility, and modern design principles.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2 border-green-200">
+                    <div class="w-full h-56 bg-cover bg-center relative overflow-hidden" 
+                         style="background-image: url('https://picsum.photos/seed/cert3/3508/2480');">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-green-700 mb-3">Cloud & DevOps Expert</h4>
+                        <p class="text-gray-700 leading-relaxed">Advanced certification in cloud technologies, containerization, and DevOps practices. Proficient in AWS, Docker, and Kubernetes deployment strategies.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 border-2 border-orange-200">
+                    <div class="w-full h-56 bg-cover bg-center relative overflow-hidden" 
+                         style="background-image: url('https://picsum.photos/seed/cert4/3508/2480');">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-orange-700 mb-3">Agile & Scrum Master</h4>
+                        <p class="text-gray-700 leading-relaxed">Certified Scrum Master with expertise in agile methodology, team leadership, and project management. Experienced in sprint planning and stakeholder communication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="rgb-border.js"></script>
+</body>
+</html>
+        </section>
