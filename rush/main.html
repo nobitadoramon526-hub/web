@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio</title>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/baron-neue');
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            font-family: 'Baron Neue', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            animation: rgb-text 5s infinite linear;
+            letter-spacing: 3px;
+            margin-top: 50px;
+        }
+
+        @keyframes rgb-text {
+            0% { color: rgb(255, 0, 0); text-shadow: 0 0 10px rgba(255,0,0,0.5); }
+            33% { color: rgb(0, 255, 0); text-shadow: 0 0 10px rgba(0,255,0,0.5); }
+            66% { color: rgb(0, 0, 255); text-shadow: 0 0 10px rgba(0,0,255,0.5); }
+            100% { color: rgb(255, 0, 0); text-shadow: 0 0 10px rgba(255,0,0,0.5); }
+        }
+
+        /* Profile Section Styling */
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px auto;
+            flex-wrap: wrap;
+        }
+
+        .profile-card {
+            background-color: #1a1a1a; /* Darker card for the dark theme */
+            border-radius: 15px;
+            font-family: sans-serif;
+            padding: 20px;
+            text-align: center;
+            width: 280px;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px);
+            border-color: #00e5ff;
+        }
+
+        .profile-card h2, .profile-card h3 {
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .profile-card p {
+            color: #aaa;
+        }
+
+        .profile-card img.avatar {
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #00e5ff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #ff00ff;
+            color: white;
+        }
+
+        /* Game Styling */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ff0000, #00ff00, #0000ff, transparent);
+            margin: 50px 0;
+        }
+
+        #game-container {
+            width: 600px;
+            height: 150px;
+            border-bottom: 2px solid white;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            background-color: #111;
+            cursor: pointer;
+        }
+
+        #dino {
+            width: 40px;
+            height: 40px;
+            background-color: #ff00ff;
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+        }
+
+        #cactus {
+            width: 30px;
+            height: 30px;
+            background-color: #00ff00;
+            position: absolute;
+            bottom: 0;
+            left: 600px;
+        }
+
+        .cactus-move {
+            animation: move 1.5s infinite linear;
+        }
+
+        @keyframes move {
+            0% { left: 600px; }
+            100% { left: -50px; }
+        }
+
+        .animate-jump {
+            animation: jump-frames 0.5s linear;
+        }
+
+        @keyframes jump-frames {
+            0% { bottom: 0; }
+            30% { bottom: 80px; }
+            70% { bottom: 80px; }
+            100% { bottom: 0; }
+        }
+
+        .copyright {
+            text-align: right;
+            font-family: 'Baron Neue', monospace;
+            font-style: italic;
+            margin: 40px 20px 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to our portfolio</h1>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2>Narubet</h2>
+            <img src="https://media1.tenor.com/m/cRTQk6N_FxMAAAAC/swag-cat-swagbilli-cutecat-cats-cat-swag-ok-yooo-yo.gif" alt="Profile 1" width="120" class="avatar">
+            <h3></h3>
+            <p><i>click button below</i></p>
+            <div style="margin: 15px 0;">
+            </div>
+            <a href="https://opulent-winner-r4jqgw7v77v7h9rv-5501.app.github.dev/rush/about.html"><button class="contact-btn">about me</button></a>
+        </div>
+
+        <div class="profile-card">
+            <h2>pampoowe</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmoV8ItKdK9B5lyhHNBPx5aJRt2ZOjmqG5g&s" alt="Profile 2" width="120" class="avatar">
+            <h3></h3>
+            <p><i>click button below</i></p>
+            <div style="margin: 15px 0;">
+            </div>
+            <a href="https://opulent-winner-r4jqgw7v77v7h9rv-5501.app.github.dev/rush/aboutbio.html"><button class="contact-btn">about me</button></a>
+        </div>
+    </div>
+   
+    <hr>
+
+    <h3>Press SPACE or Click To Jump!</h3>
+    <div id="game-container" onclick="jump()">
+        <div id="dino"></div>
+        <div id="cactus" class="cactus-move"></div>
+    </div>
+
+    <script>
+        const dino = document.getElementById("dino");
+        const cactus = document.getElementById("cactus");
+
+        function jump() {
+            if (!dino.classList.contains("animate-jump")) {
+                dino.classList.add("animate-jump");
+                setTimeout(function() {
+                    dino.classList.remove("animate-jump");
+                }, 500);
+            }
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.code === "Space") {
+                jump();
+                // Prevent scrolling when jumping
+                event.preventDefault();
+            }
+        });
+
+        let isAlive = setInterval(function() {
+            // Get current positions
+            let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+            let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
+
+            // Collision Detection logic (Adjusted for the container size)
+            // If cactus is between 0 and 90px from the left and dino is not high enough
+            if (cactusLeft < 90 && cactusLeft > 50 && dinoTop >= 110) {
+                alert("Game Over! Try again?");
+                // Reset cactus position
+                cactus.style.animation = "none";
+                void cactus.offsetWidth; // Trigger reflow
+                cactus.style.animation = "move 1.5s infinite linear";
+            }
+        }, 10);
+    </script>
+           
+    <div class="copyright">
+        &copy; our portfolio main menu :D
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* Random RGB Border Animation */
+
+.rgb-border {
+    border: 3px solid;
+    transition: border-color 0.8s ease;
+}
+
+/* Additional styling for different border widths */
+.rgb-border-small {
+    border: 2px solid;
+    transition: border-color 0.8s ease;
+}
+
+.rgb-border-medium {
+    border: 4px solid;
+    transition: border-color 0.8s ease;
+}
+
+.rgb-border-large {
+    border: 6px solid;
+    transition: border-color 0.8s ease;
+}
+
+/* Border on specific sides */
+.rgb-border-top {
+    border-top: 3px solid;
+    transition: border-top-color 0.8s ease;
+}
+
+.rgb-border-bottom {
+    border-bottom: 3px solid;
+    transition: border-bottom-color 0.8s ease;
+}
+
+.rgb-border-left {
+    border-left: 3px solid;
+    transition: border-left-color 0.8s ease;
+}
+
+.rgb-border-right {
+    border-right: 3px solid;
+    transition: border-right-color 0.8s ease;
+}
+
+/* Shadow effect with random colors */
+.rgb-shadow {
+    transition: box-shadow 0.8s ease;
+}
+
+/* Special effects */
+.rgb-border-pulse {
+    border: 3px solid;
+    transition: all 0.8s ease;
+}
+
+.rgb-border-glow {
+    border: 2px solid;
+    transition: all 0.8s ease;
+    filter: drop-shadow(0 0 8px currentColor);
+}
